@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kepada YTH Kanjeng Ratu</title>
+    <style>
+      /* animasi hati */
+      .heart {
+        width: 100px;
+        height: 90px;
+        position: relative;
+        animation: pulse 1s infinite;
+      }
+
+      .heart:before,
+      .heart:after {
+        content: "";
+        position: absolute;
+        left: 50px;
+        top: 0;
+        width: 50px;
+        height: 80px;
+        background: red;
+        border-radius: 50px 50px 0 0;
+        transform: rotate(-45deg);
+        transform-origin: 0 100%;
+      }
+
+      .heart:after {
+        left: 0;
+        transform: rotate(45deg);
+        transform-origin: 100% 100%;
+      }
+
+      /* animasi hati */
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.1);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+    </style>
+    <script>
+      function showMessage() {
+        alert("Aku sayang kamu, mau kan jadi pacar aku?");
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Aku mau ngomong sesuatu sama kamu</h1>
+    <div class="heart"></div>
+    <button onclick="showMessage()">Klik untuk yang mau diomongin</button>
+<label for="pilihan">Pilih satu:</label>
+<select id="pilihan" name="pilihan">
+  <option value="mau">mau</option>
+  <option value="maubanget" selected>mau banget</option>
+  <option value="maubangetsayangkucintaaa">mau banget sayangku cintaaa</option>
+</select>
+
+  </body>
+</html>
